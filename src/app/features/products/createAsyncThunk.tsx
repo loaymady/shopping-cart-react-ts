@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { IProduct } from "../../interface";
-import axiosInstance from "../../config/axios.config";
-import { RootState } from "../store";
+import { IProduct } from "../../../interface";
+import axiosInstance from "../../../config/axios.config";
+import { RootState } from "../../store";
 
 interface ProductsState {
   data: {

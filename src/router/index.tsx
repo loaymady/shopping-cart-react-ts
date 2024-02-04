@@ -8,6 +8,7 @@ import RootLayout from "../pages/Layout";
 import ErrorHandler from "../components/errors/ErrorHandler";
 import HomePage from "../pages";
 import Cart from "../pages/Cart";
+import ProductPage from "../pages/ProductPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<RootLayout />} errorElement={<ErrorHandler />}>
         <Route index element={<HomePage />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="product/:productId" element={<ProductPage />} />
       </Route>
 
       {/* Page Not Found */}

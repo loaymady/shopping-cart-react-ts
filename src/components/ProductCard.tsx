@@ -3,6 +3,7 @@ import { IProduct } from "../interface";
 import Button from "./ui/Button";
 import { useAppDispatch } from "../app/store";
 import { addItemToCart } from "../app/features/cart/cartSlice";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   product: IProduct;
@@ -14,9 +15,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div>
       <div className="relative flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-        <a
+        <Link
+          to={`/product/${id}`}
           className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
-          href="#"
         >
           <img
             className="object-cover"
@@ -26,7 +27,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <span className="absolute top-0 left-0 m-2 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
             39% OFF
           </span>
-        </a>
+        </Link>
         <div className="mt-4 px-5 pb-5">
           <a href="#">
             <h5 className="text-xl tracking-tight text-slate-900">
